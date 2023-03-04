@@ -1,0 +1,157 @@
+---
+id: 52b7y
+title: Users Table UI
+file_version: 1.1.2
+app_version: 1.3.7
+---
+
+# Overview
+
+This document will explain the design of the Users Table UI. The file is located at`📄 usersTable.html`
+
+# Head
+
+<br/>
+
+Two cdn scripts for Tailwind and Vue
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+3      <head>
+4          <meta charset="UTF-8">
+5          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6          <script src="https://cdn.tailwindcss.com"></script>
+7          <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+8      </head>
+```
+
+<br/>
+
+# Navigation
+
+<br/>
+
+Flexbox property. Elements are justify-between. IMProf logo has two breakpoints. One for small and one for larger screens. Username property has padding
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+9      <nav class="bg-neutral-50 border-b-4">
+10         <div class="flex justify-between">
+11             <div>
+12                 <img class="w-20 h-16 md:w-32 md:h-24" src="asset/Improf.png" alt="Improf Logo">
+13             </div>
+14             <div class="px-4 pt-6">
+15                 Username
+16             </div>
+17         </div>
+18     </nav>
+```
+
+<br/>
+
+# Body Layout
+
+<br/>
+
+The body code
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+<!-- collapsed -->
+
+```html
+19     <body>
+20         <div class="flex flex-row h-screen">
+21             <div class="bg-blue-700 basis-16 md:basis-40">
+22                 <div class="flex ml-5 mr-1 md:ml-6 md:mr-2 mt-16">
+23                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-blue-50">
+24                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+25                     </svg>
+26                     <div class="hidden md:flex md:pl-2 text-white">IMProf Table</div>
+27                 </div>
+28             </div>
+29             <div class="grow">
+30                 <table class="table-fixed mx-auto mt-10">
+31                     <thead class="bg-blue-100">
+32                         <tr>
+33                             <td class="px-6 py-6">
+34                                 Name
+35                             </td>
+36                             <td class="px-6 py-6">
+37                                 Name
+38                             </td>
+```
+
+<br/>
+
+For the body, we choose the flex layout. The two columns inside are set to flex-row. The layout height is h-screen, meaning it will fill the entire screen from top to bottom.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+20         <div class="flex flex-row h-screen">
+```
+
+<br/>
+
+# Side Nav Bar
+
+<br/>
+
+The first column inside the body is the side navigation bar. On the small screen , its size will be basis-16, while on medium and larger screens it will be basis-40.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+21             <div class="bg-blue-700 basis-16 md:basis-40">
+```
+
+<br/>
+
+For the second column, we set it to grow property as it will fill the rest of the screen.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+29             <div class="grow">
+```
+
+<br/>
+
+This div contains svg icon and its name. Elements are set as flex. Margin has two breakpoints, one for small, one for medium and larger screens.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+22                 <div class="flex ml-5 mr-1 md:ml-6 md:mr-2 mt-16">
+```
+
+<br/>
+
+This div contains a text hidden on small screen but visible under flex property on larger screens. Padding left while on medium and larger screens. No padding on small.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+26                     <div class="hidden md:flex md:pl-2 text-white">IMProf Table</div>
+```
+
+<br/>
+
+# Table
+
+<br/>
+
+Horizontal margin is set to auto. A little margin on top.
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+30                 <table class="table-fixed mx-auto mt-10">
+```
+
+<br/>
+
+Every column has padding on x axis and y axis
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 usersTable.html
+```html
+33                             <td class="px-6 py-6">
+```
+
+<br/>
+
+This file was generated by Swimm. [Click here to view it in the app](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBaW1wcm9mdWklM0ElM0FtZGF6cmlu/docs/52b7y).
